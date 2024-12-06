@@ -14,6 +14,7 @@ export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       const response = await axiosInstance.get('/api/characters');
       setCharacters(response.data);
     } catch (error) {
+      console.error(error);
       toast.error('Error al obtener los personajes');
     }
   };
@@ -25,6 +26,7 @@ export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       toast.success('Personaje agregado correctamente');
       router.push('/');
     } catch (error) {
+      console.error(error);
       toast.error('Error al agregar el personaje');
     }
   };
@@ -36,6 +38,7 @@ export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       toast.success('Personaje editado correctamente');
       router.push('/');
     } catch (error) {
+      console.error(error);
       toast.error('Error al editar el personaje');
     }
   };
@@ -46,6 +49,7 @@ export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       fetchCharacters();
       toast.success('Personaje eliminado correctamente');
     } catch (error) {
+      console.error(error);
       toast.error('Error al eliminar el personaje');
     }
   };

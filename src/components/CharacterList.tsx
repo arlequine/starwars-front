@@ -31,7 +31,7 @@ const CharacterList: React.FC = () => {
           <button onClick={() => router.push(`/form?id=${character._id}`)} className="bg-blue text-white p-2 rounded hover:bg-teal transition-colors w-full mr-1">
             Editar
           </button>
-          <button onClick={() => handleDelete(character._id)} className="bg-red-500 text-white p-2 rounded hover:bg-red-600 transition-colors w-full ml-1">
+          <button onClick={() => handleDelete(character._id as string)} className="bg-red-500 text-white p-2 rounded hover:bg-red-600 transition-colors w-full ml-1">
             Eliminar
           </button>
         </div>
